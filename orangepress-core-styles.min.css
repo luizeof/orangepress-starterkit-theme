@@ -1,0 +1,2597 @@
+/*
+
+WP-Bootstrap - Main Styles
+
+*/
+/*
+
+WP-Bootstrap
+
+*/
+/* wp-specific classes */
+/*
+
+WP-Bootstrap - Layout
+
+*/
+/* layout */
+body {
+  padding-top: 60px;
+}
+
+/* Admin Top Navigation fix */
+body.admin-bar .navbar-fixed-top {
+  top: 28px;
+}
+
+.navbar .brand {
+  color: #000;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125);
+  font-weight: bold !important;
+}
+
+.nav-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#inner-header {
+  width: 100%;
+}
+
+input, textarea, select, .uneditable-input {
+  margin-bottom: 0;
+}
+
+.navbar-search {
+  padding-left: 0;
+}
+
+#content {
+  padding: 10px 0 0;
+}
+
+.more-link {
+  white-space: nowrap;
+}
+
+.footer-links {
+  float: right;
+  margin-bottom: 18px;
+}
+
+.footer-links .menu {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.footer-links .menu li {
+  float: left;
+  margin-left: 10px;
+}
+
+/*
+
+WP-Bootstrap - Navbar
+
+*/
+/*
+
+WP-Bootstrap - Post Styles
+
+*/
+#main p.meta {
+  font-style: italic;
+  color: #808080;
+}
+
+#main article {
+  margin-bottom: 18px;
+  padding: 0 0 9px;
+}
+
+#main article footer {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+  position: relative;
+  min-height: 20px;
+}
+
+p.tags {
+  line-height: 20px;
+}
+
+div[id*='attachment_'] {
+  max-width: 100%;
+  height: 100%;
+}
+
+#main .hero-unit img {
+  margin-bottom: 1em;
+}
+
+#main article img {
+  height: auto;
+  max-width: 100%;
+}
+
+img.alignleft {
+  margin-right: 10px;
+  float: left;
+}
+
+img.alignright {
+  margin-left: 10px;
+  float: right;
+}
+
+img.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.archive #main .post h3 {
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-wrapper {
+  width: 630px;
+  max-width: 100%;
+  margin-bottom: 18px;
+}
+
+/*
+
+WP-Bootstrap - Pages
+
+*/
+#featured-carousel .item {
+  width: 970px;
+  height: 600px;
+}
+
+.carousel-caption p {
+  display: none;
+}
+
+.page-template-page-homepage-php #main article {
+  border-bottom: none;
+}
+
+.page-template-page-homepage-php .hero-unit,
+.blog .hero-unit {
+  padding: 1em;
+}
+
+.hero-unit h1 {
+  font-size: 3em;
+}
+
+/*
+
+WP-Bootstrap - Comments
+
+*/
+.btn, a.comment-reply-link, #cancel-comment-reply-link, .form-submit input[type='submit'] {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.btn:focus, a.comment-reply-link:focus, #cancel-comment-reply-link:focus, .form-submit input[type='submit']:focus, .btn.focus, a.focus.comment-reply-link, .focus#cancel-comment-reply-link, .form-submit input.focus[type='submit'], .btn:active:focus, a.comment-reply-link:active:focus, #cancel-comment-reply-link:active:focus, .form-submit input[type='submit']:active:focus, .btn:active.focus, a.comment-reply-link:active.focus, #cancel-comment-reply-link:active.focus, .form-submit input[type='submit']:active.focus, .btn.active:focus, a.active.comment-reply-link:focus, .active#cancel-comment-reply-link:focus, .form-submit input.active[type='submit']:focus, .btn.active.focus, a.active.focus.comment-reply-link, .active.focus#cancel-comment-reply-link, .form-submit input.active.focus[type='submit'] {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover, a.comment-reply-link:hover, #cancel-comment-reply-link:hover, .form-submit input[type='submit']:hover, .btn:focus, a.comment-reply-link:focus, #cancel-comment-reply-link:focus, .form-submit input[type='submit']:focus, .btn.focus, a.focus.comment-reply-link, .focus#cancel-comment-reply-link, .form-submit input.focus[type='submit'] {
+  color: #333;
+  text-decoration: none;
+}
+.btn:active, a.comment-reply-link:active, #cancel-comment-reply-link:active, .form-submit input[type='submit']:active, .btn.active, a.active.comment-reply-link, .active#cancel-comment-reply-link, .form-submit input.active[type='submit'] {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn.disabled, a.disabled.comment-reply-link, .disabled#cancel-comment-reply-link, .form-submit input.disabled[type='submit'], .btn[disabled], a[disabled].comment-reply-link, [disabled]#cancel-comment-reply-link, .form-submit input[disabled][type='submit'], fieldset[disabled] .btn, fieldset[disabled] a.comment-reply-link, fieldset[disabled] #cancel-comment-reply-link, fieldset[disabled] .form-submit input[type='submit'], .form-submit fieldset[disabled] input[type='submit'] {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
+  background-image: none;
+}
+.btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default .badge {
+  color: #fff;
+  background-color: #333;
+}
+
+.btn-primary, .form-submit input[type='submit'] {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.btn-primary:hover, .form-submit input[type='submit']:hover, .btn-primary:focus, .form-submit input[type='submit']:focus, .btn-primary.focus, .form-submit input.focus[type='submit'], .btn-primary:active, .form-submit input[type='submit']:active, .btn-primary.active, .form-submit input.active[type='submit'], .open > .btn-primary.dropdown-toggle, .form-submit .open > input.dropdown-toggle[type='submit'] {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+.btn-primary:active, .form-submit input[type='submit']:active, .btn-primary.active, .form-submit input.active[type='submit'], .open > .btn-primary.dropdown-toggle, .form-submit .open > input.dropdown-toggle[type='submit'] {
+  background-image: none;
+}
+.btn-primary.disabled, .form-submit input.disabled[type='submit'], .btn-primary.disabled:hover, .form-submit input.disabled[type='submit']:hover, .btn-primary.disabled:focus, .form-submit input.disabled[type='submit']:focus, .btn-primary.disabled.focus, .form-submit input.disabled.focus[type='submit'], .btn-primary.disabled:active, .form-submit input.disabled[type='submit']:active, .btn-primary.disabled.active, .form-submit input.disabled.active[type='submit'], .btn-primary[disabled], .form-submit input[disabled][type='submit'], .btn-primary[disabled]:hover, .form-submit input[disabled][type='submit']:hover, .btn-primary[disabled]:focus, .form-submit input[disabled][type='submit']:focus, .btn-primary[disabled].focus, .form-submit input[disabled].focus[type='submit'], .btn-primary[disabled]:active, .form-submit input[disabled][type='submit']:active, .btn-primary[disabled].active, .form-submit input[disabled].active[type='submit'], fieldset[disabled] .btn-primary, fieldset[disabled] .form-submit input[type='submit'], .form-submit fieldset[disabled] input[type='submit'], fieldset[disabled] .btn-primary:hover, fieldset[disabled] .form-submit input[type='submit']:hover, .form-submit fieldset[disabled] input[type='submit']:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .form-submit input[type='submit']:focus, .form-submit fieldset[disabled] input[type='submit']:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .form-submit input.focus[type='submit'], .form-submit fieldset[disabled] input.focus[type='submit'], fieldset[disabled] .btn-primary:active, fieldset[disabled] .form-submit input[type='submit']:active, .form-submit fieldset[disabled] input[type='submit']:active, fieldset[disabled] .btn-primary.active, fieldset[disabled] .form-submit input.active[type='submit'], .form-submit fieldset[disabled] input.active[type='submit'] {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.btn-primary .badge, .form-submit input[type='submit'] .badge {
+  color: #337ab7;
+  background-color: #fff;
+}
+
+.btn-success, a.comment-reply-link {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.btn-success:hover, a.comment-reply-link:hover, .btn-success:focus, a.comment-reply-link:focus, .btn-success.focus, a.focus.comment-reply-link, .btn-success:active, a.comment-reply-link:active, .btn-success.active, a.active.comment-reply-link, .open > .btn-success.dropdown-toggle, .open > a.dropdown-toggle.comment-reply-link {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.btn-success:active, a.comment-reply-link:active, .btn-success.active, a.active.comment-reply-link, .open > .btn-success.dropdown-toggle, .open > a.dropdown-toggle.comment-reply-link {
+  background-image: none;
+}
+.btn-success.disabled, a.disabled.comment-reply-link, .btn-success.disabled:hover, a.disabled.comment-reply-link:hover, .btn-success.disabled:focus, a.disabled.comment-reply-link:focus, .btn-success.disabled.focus, a.disabled.focus.comment-reply-link, .btn-success.disabled:active, a.disabled.comment-reply-link:active, .btn-success.disabled.active, a.disabled.active.comment-reply-link, .btn-success[disabled], a[disabled].comment-reply-link, .btn-success[disabled]:hover, a[disabled].comment-reply-link:hover, .btn-success[disabled]:focus, a[disabled].comment-reply-link:focus, .btn-success[disabled].focus, a[disabled].focus.comment-reply-link, .btn-success[disabled]:active, a[disabled].comment-reply-link:active, .btn-success[disabled].active, a[disabled].active.comment-reply-link, fieldset[disabled] .btn-success, fieldset[disabled] a.comment-reply-link, fieldset[disabled] .btn-success:hover, fieldset[disabled] a.comment-reply-link:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] a.comment-reply-link:focus, fieldset[disabled] .btn-success.focus, fieldset[disabled] a.focus.comment-reply-link, fieldset[disabled] .btn-success:active, fieldset[disabled] a.comment-reply-link:active, fieldset[disabled] .btn-success.active, fieldset[disabled] a.active.comment-reply-link {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.btn-success .badge, a.comment-reply-link .badge {
+  color: #5cb85c;
+  background-color: #fff;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
+  background-image: none;
+}
+.btn-info.disabled, .btn-info.disabled:hover, .btn-info.disabled:focus, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled.active, .btn-info[disabled], .btn-info[disabled]:hover, .btn-info[disabled]:focus, .btn-info[disabled].focus, .btn-info[disabled]:active, .btn-info[disabled].active, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.active {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.btn-info .badge {
+  color: #5bc0de;
+  background-color: #fff;
+}
+
+.btn-warning, #cancel-comment-reply-link {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.btn-warning:hover, #cancel-comment-reply-link:hover, .btn-warning:focus, #cancel-comment-reply-link:focus, .btn-warning.focus, .focus#cancel-comment-reply-link, .btn-warning:active, #cancel-comment-reply-link:active, .btn-warning.active, .active#cancel-comment-reply-link, .open > .btn-warning.dropdown-toggle, .open > .dropdown-toggle#cancel-comment-reply-link {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+.btn-warning:active, #cancel-comment-reply-link:active, .btn-warning.active, .active#cancel-comment-reply-link, .open > .btn-warning.dropdown-toggle, .open > .dropdown-toggle#cancel-comment-reply-link {
+  background-image: none;
+}
+.btn-warning.disabled, .disabled#cancel-comment-reply-link, .btn-warning.disabled:hover, .disabled#cancel-comment-reply-link:hover, .btn-warning.disabled:focus, .disabled#cancel-comment-reply-link:focus, .btn-warning.disabled.focus, .disabled.focus#cancel-comment-reply-link, .btn-warning.disabled:active, .disabled#cancel-comment-reply-link:active, .btn-warning.disabled.active, .disabled.active#cancel-comment-reply-link, .btn-warning[disabled], [disabled]#cancel-comment-reply-link, .btn-warning[disabled]:hover, [disabled]#cancel-comment-reply-link:hover, .btn-warning[disabled]:focus, [disabled]#cancel-comment-reply-link:focus, .btn-warning[disabled].focus, [disabled].focus#cancel-comment-reply-link, .btn-warning[disabled]:active, [disabled]#cancel-comment-reply-link:active, .btn-warning[disabled].active, [disabled].active#cancel-comment-reply-link, fieldset[disabled] .btn-warning, fieldset[disabled] #cancel-comment-reply-link, fieldset[disabled] .btn-warning:hover, fieldset[disabled] #cancel-comment-reply-link:hover, fieldset[disabled] .btn-warning:focus, fieldset[disabled] #cancel-comment-reply-link:focus, fieldset[disabled] .btn-warning.focus, fieldset[disabled] .focus#cancel-comment-reply-link, fieldset[disabled] .btn-warning:active, fieldset[disabled] #cancel-comment-reply-link:active, fieldset[disabled] .btn-warning.active, fieldset[disabled] .active#cancel-comment-reply-link {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.btn-warning .badge, #cancel-comment-reply-link .badge {
+  color: #f0ad4e;
+  background-color: #fff;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.btn-danger:hover, .btn-danger:focus, .btn-danger.focus, .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
+  background-image: none;
+}
+.btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled].focus, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger.focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.btn-danger .badge {
+  color: #d9534f;
+  background-color: #fff;
+}
+
+.btn-link {
+  color: #337ab7;
+  font-weight: normal;
+  border-radius: 0;
+}
+.btn-link, .btn-link:active, .btn-link.active, .btn-link[disabled], fieldset[disabled] .btn-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
+  border-color: transparent;
+}
+.btn-link:hover, .btn-link:focus {
+  color: #23527c;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus {
+  color: #777777;
+  text-decoration: none;
+}
+
+.btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33333;
+  border-radius: 6px;
+}
+
+.btn-sm, a.comment-reply-link {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.btn-xs, #cancel-comment-reply-link {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  width: 100%;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: inherit;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+output {
+  display: block;
+  padding-top: 7px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555555;
+}
+
+.form-control, .comment-form-author input,
+.comment-form-author textarea,
+.comment-form-email input,
+.comment-form-email textarea,
+.comment-form-url input,
+.comment-form-url textarea,
+.comment-form-comment input,
+.comment-form-comment textarea {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.form-control:focus, .comment-form-author input:focus,
+.comment-form-author textarea:focus,
+.comment-form-email input:focus,
+.comment-form-email textarea:focus,
+.comment-form-url input:focus,
+.comment-form-url textarea:focus,
+.comment-form-comment input:focus,
+.comment-form-comment textarea:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.form-control::-moz-placeholder, .comment-form-author input::-moz-placeholder,
+.comment-form-author textarea::-moz-placeholder,
+.comment-form-email input::-moz-placeholder,
+.comment-form-email textarea::-moz-placeholder,
+.comment-form-url input::-moz-placeholder,
+.comment-form-url textarea::-moz-placeholder,
+.comment-form-comment input::-moz-placeholder,
+.comment-form-comment textarea::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder, .comment-form-author input:-ms-input-placeholder,
+.comment-form-author textarea:-ms-input-placeholder,
+.comment-form-email input:-ms-input-placeholder,
+.comment-form-email textarea:-ms-input-placeholder,
+.comment-form-url input:-ms-input-placeholder,
+.comment-form-url textarea:-ms-input-placeholder,
+.comment-form-comment input:-ms-input-placeholder,
+.comment-form-comment textarea:-ms-input-placeholder {
+  color: #999;
+}
+.form-control::-webkit-input-placeholder, .comment-form-author input::-webkit-input-placeholder,
+.comment-form-author textarea::-webkit-input-placeholder,
+.comment-form-email input::-webkit-input-placeholder,
+.comment-form-email textarea::-webkit-input-placeholder,
+.comment-form-url input::-webkit-input-placeholder,
+.comment-form-url textarea::-webkit-input-placeholder,
+.comment-form-comment input::-webkit-input-placeholder,
+.comment-form-comment textarea::-webkit-input-placeholder {
+  color: #999;
+}
+.form-control[disabled], .comment-form-author input[disabled],
+.comment-form-author textarea[disabled],
+.comment-form-email input[disabled],
+.comment-form-email textarea[disabled],
+.comment-form-url input[disabled],
+.comment-form-url textarea[disabled],
+.comment-form-comment input[disabled],
+.comment-form-comment textarea[disabled], .form-control[readonly], .comment-form-author input[readonly],
+.comment-form-author textarea[readonly],
+.comment-form-email input[readonly],
+.comment-form-email textarea[readonly],
+.comment-form-url input[readonly],
+.comment-form-url textarea[readonly],
+.comment-form-comment input[readonly],
+.comment-form-comment textarea[readonly], fieldset[disabled] .form-control, fieldset[disabled] .comment-form-author input, .comment-form-author fieldset[disabled] input,
+fieldset[disabled] .comment-form-author textarea,
+.comment-form-author fieldset[disabled] textarea,
+fieldset[disabled] .comment-form-email input,
+.comment-form-email fieldset[disabled] input,
+fieldset[disabled] .comment-form-email textarea,
+.comment-form-email fieldset[disabled] textarea,
+fieldset[disabled] .comment-form-url input,
+.comment-form-url fieldset[disabled] input,
+fieldset[disabled] .comment-form-url textarea,
+.comment-form-url fieldset[disabled] textarea,
+fieldset[disabled] .comment-form-comment input,
+.comment-form-comment fieldset[disabled] input,
+fieldset[disabled] .comment-form-comment textarea,
+.comment-form-comment fieldset[disabled] textarea {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+
+textarea.form-control,
+.comment-form-author textarea,
+.comment-form-email textarea,
+.comment-form-url textarea,
+.comment-form-comment textarea {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"] {
+    line-height: 34px;
+  }
+  input[type="date"].input-sm, .input-group-sm input[type="date"],
+  input[type="time"].input-sm, .input-group-sm
+  input[type="time"],
+  input[type="datetime-local"].input-sm, .input-group-sm
+  input[type="datetime-local"],
+  input[type="month"].input-sm, .input-group-sm
+  input[type="month"] {
+    line-height: 30px;
+  }
+  input[type="date"].input-lg, .input-group-lg input[type="date"],
+  input[type="time"].input-lg, .input-group-lg
+  input[type="time"],
+  input[type="datetime-local"].input-lg, .input-group-lg
+  input[type="datetime-local"],
+  input[type="month"].input-lg, .input-group-lg
+  input[type="month"] {
+    line-height: 46px;
+  }
+}
+.form-group, .comment-form-author,
+.comment-form-email,
+.comment-form-url,
+.comment-form-comment {
+  margin-bottom: 15px;
+}
+
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.radio label,
+.checkbox label {
+  min-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px \9;
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: -5px;
+}
+
+.radio-inline,
+.checkbox-inline {
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+input[type="radio"][disabled], input[type="radio"].disabled, fieldset[disabled] input[type="radio"],
+input[type="checkbox"][disabled],
+input[type="checkbox"].disabled, fieldset[disabled]
+input[type="checkbox"] {
+  cursor: not-allowed;
+}
+
+.radio-inline.disabled, fieldset[disabled] .radio-inline,
+.checkbox-inline.disabled, fieldset[disabled]
+.checkbox-inline {
+  cursor: not-allowed;
+}
+
+.radio.disabled label, fieldset[disabled] .radio label,
+.checkbox.disabled label, fieldset[disabled]
+.checkbox label {
+  cursor: not-allowed;
+}
+
+.form-control-static {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 0;
+}
+.form-control-static.input-lg, .form-control-static.input-sm {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.input-sm {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+select.input-sm {
+  height: 30px;
+  line-height: 30px;
+}
+
+textarea.input-sm,
+select[multiple].input-sm {
+  height: auto;
+}
+
+.form-group-sm .form-control, .form-group-sm .comment-form-author input, .comment-form-author .form-group-sm input,
+.form-group-sm .comment-form-author textarea,
+.comment-form-author .form-group-sm textarea,
+.form-group-sm .comment-form-email input,
+.comment-form-email .form-group-sm input,
+.form-group-sm .comment-form-email textarea,
+.comment-form-email .form-group-sm textarea,
+.form-group-sm .comment-form-url input,
+.comment-form-url .form-group-sm input,
+.form-group-sm .comment-form-url textarea,
+.comment-form-url .form-group-sm textarea,
+.form-group-sm .comment-form-comment input,
+.comment-form-comment .form-group-sm input,
+.form-group-sm .comment-form-comment textarea,
+.comment-form-comment .form-group-sm textarea {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.form-group-sm select.form-control {
+  height: 30px;
+  line-height: 30px;
+}
+.form-group-sm textarea.form-control,
+.form-group-sm .comment-form-author textarea,
+.comment-form-author .form-group-sm textarea,
+.form-group-sm .comment-form-email textarea,
+.comment-form-email .form-group-sm textarea,
+.form-group-sm .comment-form-url textarea,
+.comment-form-url .form-group-sm textarea,
+.form-group-sm .comment-form-comment textarea,
+.comment-form-comment .form-group-sm textarea,
+.form-group-sm select[multiple].form-control {
+  height: auto;
+}
+.form-group-sm .form-control-static {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.input-lg {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33333;
+  border-radius: 6px;
+}
+
+select.input-lg {
+  height: 46px;
+  line-height: 46px;
+}
+
+textarea.input-lg,
+select[multiple].input-lg {
+  height: auto;
+}
+
+.form-group-lg .form-control, .form-group-lg .comment-form-author input, .comment-form-author .form-group-lg input,
+.form-group-lg .comment-form-author textarea,
+.comment-form-author .form-group-lg textarea,
+.form-group-lg .comment-form-email input,
+.comment-form-email .form-group-lg input,
+.form-group-lg .comment-form-email textarea,
+.comment-form-email .form-group-lg textarea,
+.form-group-lg .comment-form-url input,
+.comment-form-url .form-group-lg input,
+.form-group-lg .comment-form-url textarea,
+.comment-form-url .form-group-lg textarea,
+.form-group-lg .comment-form-comment input,
+.comment-form-comment .form-group-lg input,
+.form-group-lg .comment-form-comment textarea,
+.comment-form-comment .form-group-lg textarea {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33333;
+  border-radius: 6px;
+}
+.form-group-lg select.form-control {
+  height: 46px;
+  line-height: 46px;
+}
+.form-group-lg textarea.form-control,
+.form-group-lg .comment-form-author textarea,
+.comment-form-author .form-group-lg textarea,
+.form-group-lg .comment-form-email textarea,
+.comment-form-email .form-group-lg textarea,
+.form-group-lg .comment-form-url textarea,
+.comment-form-url .form-group-lg textarea,
+.form-group-lg .comment-form-comment textarea,
+.comment-form-comment .form-group-lg textarea,
+.form-group-lg select[multiple].form-control {
+  height: auto;
+}
+.form-group-lg .form-control-static {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33333;
+}
+
+.has-feedback {
+  position: relative;
+}
+.has-feedback .form-control, .has-feedback .comment-form-author input, .comment-form-author .has-feedback input,
+.has-feedback .comment-form-author textarea,
+.comment-form-author .has-feedback textarea,
+.has-feedback .comment-form-email input,
+.comment-form-email .has-feedback input,
+.has-feedback .comment-form-email textarea,
+.comment-form-email .has-feedback textarea,
+.has-feedback .comment-form-url input,
+.comment-form-url .has-feedback input,
+.has-feedback .comment-form-url textarea,
+.comment-form-url .has-feedback textarea,
+.has-feedback .comment-form-comment input,
+.comment-form-comment .has-feedback input,
+.has-feedback .comment-form-comment textarea,
+.comment-form-comment .has-feedback textarea {
+  padding-right: 42.5px;
+}
+
+.form-control-feedback {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.input-lg + .form-control-feedback {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+}
+
+.input-sm + .form-control-feedback {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline, .has-success.radio label, .has-success.checkbox label, .has-success.radio-inline label, .has-success.checkbox-inline label {
+  color: #3c763d;
+}
+.has-success .form-control, .has-success .comment-form-author input, .comment-form-author .has-success input,
+.has-success .comment-form-author textarea,
+.comment-form-author .has-success textarea,
+.has-success .comment-form-email input,
+.comment-form-email .has-success input,
+.has-success .comment-form-email textarea,
+.comment-form-email .has-success textarea,
+.has-success .comment-form-url input,
+.comment-form-url .has-success input,
+.has-success .comment-form-url textarea,
+.comment-form-url .has-success textarea,
+.has-success .comment-form-comment input,
+.comment-form-comment .has-success input,
+.has-success .comment-form-comment textarea,
+.comment-form-comment .has-success textarea {
+  border-color: #3c763d;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.has-success .form-control:focus, .has-success .comment-form-author input:focus, .comment-form-author .has-success input:focus,
+.has-success .comment-form-author textarea:focus,
+.comment-form-author .has-success textarea:focus,
+.has-success .comment-form-email input:focus,
+.comment-form-email .has-success input:focus,
+.has-success .comment-form-email textarea:focus,
+.comment-form-email .has-success textarea:focus,
+.has-success .comment-form-url input:focus,
+.comment-form-url .has-success input:focus,
+.has-success .comment-form-url textarea:focus,
+.comment-form-url .has-success textarea:focus,
+.has-success .comment-form-comment input:focus,
+.comment-form-comment .has-success input:focus,
+.has-success .comment-form-comment textarea:focus,
+.comment-form-comment .has-success textarea:focus {
+  border-color: #2b542c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+}
+.has-success .input-group-addon {
+  color: #3c763d;
+  border-color: #3c763d;
+  background-color: #dff0d8;
+}
+.has-success .form-control-feedback {
+  color: #3c763d;
+}
+
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline, .has-warning.radio label, .has-warning.checkbox label, .has-warning.radio-inline label, .has-warning.checkbox-inline label {
+  color: #8a6d3b;
+}
+.has-warning .form-control, .has-warning .comment-form-author input, .comment-form-author .has-warning input,
+.has-warning .comment-form-author textarea,
+.comment-form-author .has-warning textarea,
+.has-warning .comment-form-email input,
+.comment-form-email .has-warning input,
+.has-warning .comment-form-email textarea,
+.comment-form-email .has-warning textarea,
+.has-warning .comment-form-url input,
+.comment-form-url .has-warning input,
+.has-warning .comment-form-url textarea,
+.comment-form-url .has-warning textarea,
+.has-warning .comment-form-comment input,
+.comment-form-comment .has-warning input,
+.has-warning .comment-form-comment textarea,
+.comment-form-comment .has-warning textarea {
+  border-color: #8a6d3b;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.has-warning .form-control:focus, .has-warning .comment-form-author input:focus, .comment-form-author .has-warning input:focus,
+.has-warning .comment-form-author textarea:focus,
+.comment-form-author .has-warning textarea:focus,
+.has-warning .comment-form-email input:focus,
+.comment-form-email .has-warning input:focus,
+.has-warning .comment-form-email textarea:focus,
+.comment-form-email .has-warning textarea:focus,
+.has-warning .comment-form-url input:focus,
+.comment-form-url .has-warning input:focus,
+.has-warning .comment-form-url textarea:focus,
+.comment-form-url .has-warning textarea:focus,
+.has-warning .comment-form-comment input:focus,
+.comment-form-comment .has-warning input:focus,
+.has-warning .comment-form-comment textarea:focus,
+.comment-form-comment .has-warning textarea:focus {
+  border-color: #66512c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+}
+.has-warning .input-group-addon {
+  color: #8a6d3b;
+  border-color: #8a6d3b;
+  background-color: #fcf8e3;
+}
+.has-warning .form-control-feedback {
+  color: #8a6d3b;
+}
+
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
+  color: #a94442;
+}
+.has-error .form-control, .has-error .comment-form-author input, .comment-form-author .has-error input,
+.has-error .comment-form-author textarea,
+.comment-form-author .has-error textarea,
+.has-error .comment-form-email input,
+.comment-form-email .has-error input,
+.has-error .comment-form-email textarea,
+.comment-form-email .has-error textarea,
+.has-error .comment-form-url input,
+.comment-form-url .has-error input,
+.has-error .comment-form-url textarea,
+.comment-form-url .has-error textarea,
+.has-error .comment-form-comment input,
+.comment-form-comment .has-error input,
+.has-error .comment-form-comment textarea,
+.comment-form-comment .has-error textarea {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.has-error .form-control:focus, .has-error .comment-form-author input:focus, .comment-form-author .has-error input:focus,
+.has-error .comment-form-author textarea:focus,
+.comment-form-author .has-error textarea:focus,
+.has-error .comment-form-email input:focus,
+.comment-form-email .has-error input:focus,
+.has-error .comment-form-email textarea:focus,
+.comment-form-email .has-error textarea:focus,
+.has-error .comment-form-url input:focus,
+.comment-form-url .has-error input:focus,
+.has-error .comment-form-url textarea:focus,
+.comment-form-url .has-error textarea:focus,
+.has-error .comment-form-comment input:focus,
+.comment-form-comment .has-error input:focus,
+.has-error .comment-form-comment textarea:focus,
+.comment-form-comment .has-error textarea:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+.has-error .input-group-addon {
+  color: #a94442;
+  border-color: #a94442;
+  background-color: #f2dede;
+}
+.has-error .form-control-feedback {
+  color: #a94442;
+}
+
+.has-feedback label ~ .form-control-feedback {
+  top: 25px;
+}
+.has-feedback label.sr-only ~ .form-control-feedback {
+  top: 0;
+}
+
+.help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
+
+@media (min-width: 768px) {
+  .form-inline .form-group, .form-inline .comment-form-author,
+  .form-inline .comment-form-email,
+  .form-inline .comment-form-url,
+  .form-inline .comment-form-comment {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .form-inline .form-control, .form-inline .comment-form-author input, .comment-form-author .form-inline input,
+  .form-inline .comment-form-author textarea,
+  .comment-form-author .form-inline textarea,
+  .form-inline .comment-form-email input,
+  .comment-form-email .form-inline input,
+  .form-inline .comment-form-email textarea,
+  .comment-form-email .form-inline textarea,
+  .form-inline .comment-form-url input,
+  .comment-form-url .form-inline input,
+  .form-inline .comment-form-url textarea,
+  .comment-form-url .form-inline textarea,
+  .form-inline .comment-form-comment input,
+  .comment-form-comment .form-inline input,
+  .form-inline .comment-form-comment textarea,
+  .comment-form-comment .form-inline textarea {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  .form-inline .form-control-static {
+    display: inline-block;
+  }
+  .form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+  .form-inline .input-group .input-group-addon,
+  .form-inline .input-group .input-group-btn,
+  .form-inline .input-group .form-control,
+  .form-inline .input-group .comment-form-author input,
+  .comment-form-author .form-inline .input-group input,
+  .form-inline .input-group .comment-form-author textarea,
+  .comment-form-author .form-inline .input-group textarea,
+  .form-inline .input-group .comment-form-email input,
+  .comment-form-email .form-inline .input-group input,
+  .form-inline .input-group .comment-form-email textarea,
+  .comment-form-email .form-inline .input-group textarea,
+  .form-inline .input-group .comment-form-url input,
+  .comment-form-url .form-inline .input-group input,
+  .form-inline .input-group .comment-form-url textarea,
+  .comment-form-url .form-inline .input-group textarea,
+  .form-inline .input-group .comment-form-comment input,
+  .comment-form-comment .form-inline .input-group input,
+  .form-inline .input-group .comment-form-comment textarea,
+  .comment-form-comment .form-inline .input-group textarea {
+    width: auto;
+  }
+  .form-inline .input-group > .form-control, .form-inline .comment-form-author .input-group > input, .comment-form-author .form-inline .input-group > input,
+  .form-inline .comment-form-author .input-group > textarea,
+  .comment-form-author .form-inline .input-group > textarea,
+  .form-inline .comment-form-email .input-group > input,
+  .comment-form-email .form-inline .input-group > input,
+  .form-inline .comment-form-email .input-group > textarea,
+  .comment-form-email .form-inline .input-group > textarea,
+  .form-inline .comment-form-url .input-group > input,
+  .comment-form-url .form-inline .input-group > input,
+  .form-inline .comment-form-url .input-group > textarea,
+  .comment-form-url .form-inline .input-group > textarea,
+  .form-inline .comment-form-comment .input-group > input,
+  .comment-form-comment .form-inline .input-group > input,
+  .form-inline .comment-form-comment .input-group > textarea,
+  .comment-form-comment .form-inline .input-group > textarea {
+    width: 100%;
+  }
+  .form-inline .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .form-inline .radio,
+  .form-inline .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .form-inline .radio label,
+  .form-inline .checkbox label {
+    padding-left: 0;
+  }
+  .form-inline .radio input[type="radio"],
+  .form-inline .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+  .form-inline .has-feedback .form-control-feedback {
+    top: 0;
+  }
+}
+
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+.form-horizontal .radio,
+.form-horizontal .checkbox {
+  min-height: 27px;
+}
+.form-horizontal .form-group, .form-horizontal .comment-form-author,
+.form-horizontal .comment-form-email,
+.form-horizontal .comment-form-url,
+.form-horizontal .comment-form-comment {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.form-horizontal .form-group:before, .form-horizontal .comment-form-author:before,
+.form-horizontal .comment-form-email:before,
+.form-horizontal .comment-form-url:before,
+.form-horizontal .comment-form-comment:before, .form-horizontal .form-group:after, .form-horizontal .comment-form-author:after,
+.form-horizontal .comment-form-email:after,
+.form-horizontal .comment-form-url:after,
+.form-horizontal .comment-form-comment:after {
+  content: " ";
+  display: table;
+}
+.form-horizontal .form-group:after, .form-horizontal .comment-form-author:after,
+.form-horizontal .comment-form-email:after,
+.form-horizontal .comment-form-url:after,
+.form-horizontal .comment-form-comment:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+}
+.form-horizontal .has-feedback .form-control-feedback {
+  right: 15px;
+}
+@media (min-width: 768px) {
+  .form-horizontal .form-group-lg .control-label {
+    padding-top: 14.33333px;
+  }
+}
+@media (min-width: 768px) {
+  .form-horizontal .form-group-sm .control-label {
+    padding-top: 6px;
+  }
+}
+
+#comments {
+  line-height: 24px;
+  margin-bottom: 18px;
+}
+
+ol.commentlist,
+ol.commentlist ul.children {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.comment .vcard > div {
+  margin-top: 8px;
+  padding: 0 10px;
+}
+
+ol.commentlist time {
+  font-size: .8em;
+  color: #eeeeee;
+}
+
+ol.commentlist div.comment-author {
+  position: relative;
+}
+
+ol.commentlist a.comment-edit-link {
+  color: #ffffff;
+  text-decoration: none;
+  padding-left: 5px;
+}
+
+ol.commentlist span.edit-comment {
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+
+ol.commentlist li.bypostauthor {
+  background-color: #dddddd;
+}
+
+ol.commentlist ul.children li {
+  background-color: #cccccc;
+}
+
+ol.commentlist ul.children li ul.children li {
+  background-color: #bbbbbb;
+}
+
+ol.commentlist ul.children li ul.children li ul.children li {
+  background-color: #aaaaaa;
+}
+
+ol.commentlist article {
+  border-bottom: none !important;
+}
+
+a.comment-reply-link {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#cancel-comment-reply-link {
+  margin-left: 1em;
+}
+
+#comment-nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+#comment-form-elements {
+  list-style-type: none;
+  margin: 0;
+}
+
+.comment-form-author textarea,
+.comment-form-email textarea,
+.comment-form-url textarea,
+.comment-form-comment textarea {
+  height: auto;
+}
+
+.form-allowed-tags code {
+  white-space: normal;
+}
+
+.comment .vcard .avatar {
+  padding-right: 0;
+}
+
+.comment .vcard .comment-text {
+  margin-left: 0;
+}
+
+img.avatar {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #dedede;
+  border-right: 1px solid #dedede;
+  border-left: 1px solid #ddd;
+}
+
+ol.commentlist li {
+  padding-right: 10px;
+  background-color: #F0F0F0;
+}
+
+#pings {
+  margin-bottom: 9px;
+}
+
+ol.pinglist {
+  list-style-type: none;
+  margin: 0 0 9px 0;
+}
+
+ol.commentlist #respond {
+  padding: 5px 10px;
+}
+
+/*
+
+WP-Bootstrap - Image Attachments
+
+*/
+.attachment #main .post_content img {
+  max-width: 100%;
+}
+
+.ie8 #main .media-grid img {
+  max-height: none !important;
+  max-width: none !important;
+}
+
+.attachment-img {
+  margin-bottom: 18px;
+}
+
+.metadata p.alert-message {
+  margin-right: 0;
+  margin-bottom: 18px;
+}
+
+#gallery-nav {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+li.next a, li.previous a {
+  position: relative;
+}
+
+li.next a:hover:before {
+  content: "\2190";
+  position: absolute;
+  display: block;
+  top: 42%;
+  left: 0;
+  background-color: #BFBFBF;
+  color: #444;
+  width: 20px;
+  height: 20px;
+  padding-left: 5px;
+  text-decoration: none;
+  box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+
+li.previous a:hover:before {
+  content: "\2192";
+  position: absolute;
+  display: block;
+  top: 42%;
+  right: 0;
+  background-color: #BFBFBF;
+  color: #444;
+  width: 20px;
+  height: 20px;
+  padding-left: 5px;
+  text-decoration: none;
+  box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+
+/*
+
+WP-Bootstrap - Widgets
+
+*/
+.btn, a.comment-reply-link, #cancel-comment-reply-link, .form-submit input[type='submit'] {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.btn:focus, a.comment-reply-link:focus, #cancel-comment-reply-link:focus, .form-submit input[type='submit']:focus, .btn.focus, a.focus.comment-reply-link, .focus#cancel-comment-reply-link, .form-submit input.focus[type='submit'], .btn:active:focus, a.comment-reply-link:active:focus, #cancel-comment-reply-link:active:focus, .form-submit input[type='submit']:active:focus, .btn:active.focus, a.comment-reply-link:active.focus, #cancel-comment-reply-link:active.focus, .form-submit input[type='submit']:active.focus, .btn.active:focus, a.active.comment-reply-link:focus, .active#cancel-comment-reply-link:focus, .form-submit input.active[type='submit']:focus, .btn.active.focus, a.active.focus.comment-reply-link, .active.focus#cancel-comment-reply-link, .form-submit input.active.focus[type='submit'] {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover, a.comment-reply-link:hover, #cancel-comment-reply-link:hover, .form-submit input[type='submit']:hover, .btn:focus, a.comment-reply-link:focus, #cancel-comment-reply-link:focus, .form-submit input[type='submit']:focus, .btn.focus, a.focus.comment-reply-link, .focus#cancel-comment-reply-link, .form-submit input.focus[type='submit'] {
+  color: #333;
+  text-decoration: none;
+}
+.btn:active, a.comment-reply-link:active, #cancel-comment-reply-link:active, .form-submit input[type='submit']:active, .btn.active, a.active.comment-reply-link, .active#cancel-comment-reply-link, .form-submit input.active[type='submit'] {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn.disabled, a.disabled.comment-reply-link, .disabled#cancel-comment-reply-link, .form-submit input.disabled[type='submit'], .btn[disabled], a[disabled].comment-reply-link, [disabled]#cancel-comment-reply-link, .form-submit input[disabled][type='submit'], fieldset[disabled] .btn, fieldset[disabled] a.comment-reply-link, fieldset[disabled] #cancel-comment-reply-link, fieldset[disabled] .form-submit input[type='submit'], .form-submit fieldset[disabled] input[type='submit'] {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
+  background-image: none;
+}
+.btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default .badge {
+  color: #fff;
+  background-color: #333;
+}
+
+.btn-primary, .form-submit input[type='submit'] {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.btn-primary:hover, .form-submit input[type='submit']:hover, .btn-primary:focus, .form-submit input[type='submit']:focus, .btn-primary.focus, .form-submit input.focus[type='submit'], .btn-primary:active, .form-submit input[type='submit']:active, .btn-primary.active, .form-submit input.active[type='submit'], .open > .btn-primary.dropdown-toggle, .form-submit .open > input.dropdown-toggle[type='submit'] {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+.btn-primary:active, .form-submit input[type='submit']:active, .btn-primary.active, .form-submit input.active[type='submit'], .open > .btn-primary.dropdown-toggle, .form-submit .open > input.dropdown-toggle[type='submit'] {
+  background-image: none;
+}
+.btn-primary.disabled, .form-submit input.disabled[type='submit'], .btn-primary.disabled:hover, .form-submit input.disabled[type='submit']:hover, .btn-primary.disabled:focus, .form-submit input.disabled[type='submit']:focus, .btn-primary.disabled.focus, .form-submit input.disabled.focus[type='submit'], .btn-primary.disabled:active, .form-submit input.disabled[type='submit']:active, .btn-primary.disabled.active, .form-submit input.disabled.active[type='submit'], .btn-primary[disabled], .form-submit input[disabled][type='submit'], .btn-primary[disabled]:hover, .form-submit input[disabled][type='submit']:hover, .btn-primary[disabled]:focus, .form-submit input[disabled][type='submit']:focus, .btn-primary[disabled].focus, .form-submit input[disabled].focus[type='submit'], .btn-primary[disabled]:active, .form-submit input[disabled][type='submit']:active, .btn-primary[disabled].active, .form-submit input[disabled].active[type='submit'], fieldset[disabled] .btn-primary, fieldset[disabled] .form-submit input[type='submit'], .form-submit fieldset[disabled] input[type='submit'], fieldset[disabled] .btn-primary:hover, fieldset[disabled] .form-submit input[type='submit']:hover, .form-submit fieldset[disabled] input[type='submit']:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .form-submit input[type='submit']:focus, .form-submit fieldset[disabled] input[type='submit']:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .form-submit input.focus[type='submit'], .form-submit fieldset[disabled] input.focus[type='submit'], fieldset[disabled] .btn-primary:active, fieldset[disabled] .form-submit input[type='submit']:active, .form-submit fieldset[disabled] input[type='submit']:active, fieldset[disabled] .btn-primary.active, fieldset[disabled] .form-submit input.active[type='submit'], .form-submit fieldset[disabled] input.active[type='submit'] {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.btn-primary .badge, .form-submit input[type='submit'] .badge {
+  color: #337ab7;
+  background-color: #fff;
+}
+
+.btn-success, a.comment-reply-link {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.btn-success:hover, a.comment-reply-link:hover, .btn-success:focus, a.comment-reply-link:focus, .btn-success.focus, a.focus.comment-reply-link, .btn-success:active, a.comment-reply-link:active, .btn-success.active, a.active.comment-reply-link, .open > .btn-success.dropdown-toggle, .open > a.dropdown-toggle.comment-reply-link {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.btn-success:active, a.comment-reply-link:active, .btn-success.active, a.active.comment-reply-link, .open > .btn-success.dropdown-toggle, .open > a.dropdown-toggle.comment-reply-link {
+  background-image: none;
+}
+.btn-success.disabled, a.disabled.comment-reply-link, .btn-success.disabled:hover, a.disabled.comment-reply-link:hover, .btn-success.disabled:focus, a.disabled.comment-reply-link:focus, .btn-success.disabled.focus, a.disabled.focus.comment-reply-link, .btn-success.disabled:active, a.disabled.comment-reply-link:active, .btn-success.disabled.active, a.disabled.active.comment-reply-link, .btn-success[disabled], a[disabled].comment-reply-link, .btn-success[disabled]:hover, a[disabled].comment-reply-link:hover, .btn-success[disabled]:focus, a[disabled].comment-reply-link:focus, .btn-success[disabled].focus, a[disabled].focus.comment-reply-link, .btn-success[disabled]:active, a[disabled].comment-reply-link:active, .btn-success[disabled].active, a[disabled].active.comment-reply-link, fieldset[disabled] .btn-success, fieldset[disabled] a.comment-reply-link, fieldset[disabled] .btn-success:hover, fieldset[disabled] a.comment-reply-link:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] a.comment-reply-link:focus, fieldset[disabled] .btn-success.focus, fieldset[disabled] a.focus.comment-reply-link, fieldset[disabled] .btn-success:active, fieldset[disabled] a.comment-reply-link:active, fieldset[disabled] .btn-success.active, fieldset[disabled] a.active.comment-reply-link {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.btn-success .badge, a.comment-reply-link .badge {
+  color: #5cb85c;
+  background-color: #fff;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
+  background-image: none;
+}
+.btn-info.disabled, .btn-info.disabled:hover, .btn-info.disabled:focus, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled.active, .btn-info[disabled], .btn-info[disabled]:hover, .btn-info[disabled]:focus, .btn-info[disabled].focus, .btn-info[disabled]:active, .btn-info[disabled].active, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.active {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.btn-info .badge {
+  color: #5bc0de;
+  background-color: #fff;
+}
+
+.btn-warning, #cancel-comment-reply-link {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.btn-warning:hover, #cancel-comment-reply-link:hover, .btn-warning:focus, #cancel-comment-reply-link:focus, .btn-warning.focus, .focus#cancel-comment-reply-link, .btn-warning:active, #cancel-comment-reply-link:active, .btn-warning.active, .active#cancel-comment-reply-link, .open > .btn-warning.dropdown-toggle, .open > .dropdown-toggle#cancel-comment-reply-link {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+.btn-warning:active, #cancel-comment-reply-link:active, .btn-warning.active, .active#cancel-comment-reply-link, .open > .btn-warning.dropdown-toggle, .open > .dropdown-toggle#cancel-comment-reply-link {
+  background-image: none;
+}
+.btn-warning.disabled, .disabled#cancel-comment-reply-link, .btn-warning.disabled:hover, .disabled#cancel-comment-reply-link:hover, .btn-warning.disabled:focus, .disabled#cancel-comment-reply-link:focus, .btn-warning.disabled.focus, .disabled.focus#cancel-comment-reply-link, .btn-warning.disabled:active, .disabled#cancel-comment-reply-link:active, .btn-warning.disabled.active, .disabled.active#cancel-comment-reply-link, .btn-warning[disabled], [disabled]#cancel-comment-reply-link, .btn-warning[disabled]:hover, [disabled]#cancel-comment-reply-link:hover, .btn-warning[disabled]:focus, [disabled]#cancel-comment-reply-link:focus, .btn-warning[disabled].focus, [disabled].focus#cancel-comment-reply-link, .btn-warning[disabled]:active, [disabled]#cancel-comment-reply-link:active, .btn-warning[disabled].active, [disabled].active#cancel-comment-reply-link, fieldset[disabled] .btn-warning, fieldset[disabled] #cancel-comment-reply-link, fieldset[disabled] .btn-warning:hover, fieldset[disabled] #cancel-comment-reply-link:hover, fieldset[disabled] .btn-warning:focus, fieldset[disabled] #cancel-comment-reply-link:focus, fieldset[disabled] .btn-warning.focus, fieldset[disabled] .focus#cancel-comment-reply-link, fieldset[disabled] .btn-warning:active, fieldset[disabled] #cancel-comment-reply-link:active, fieldset[disabled] .btn-warning.active, fieldset[disabled] .active#cancel-comment-reply-link {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.btn-warning .badge, #cancel-comment-reply-link .badge {
+  color: #f0ad4e;
+  background-color: #fff;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.btn-danger:hover, .btn-danger:focus, .btn-danger.focus, .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
+  background-image: none;
+}
+.btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled].focus, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger.focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.btn-danger .badge {
+  color: #d9534f;
+  background-color: #fff;
+}
+
+.btn-link {
+  color: #337ab7;
+  font-weight: normal;
+  border-radius: 0;
+}
+.btn-link, .btn-link:active, .btn-link.active, .btn-link[disabled], fieldset[disabled] .btn-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
+  border-color: transparent;
+}
+.btn-link:hover, .btn-link:focus {
+  color: #23527c;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus {
+  color: #777777;
+  text-decoration: none;
+}
+
+.btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33333;
+  border-radius: 6px;
+}
+
+.btn-sm, a.comment-reply-link {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.btn-xs, #cancel-comment-reply-link {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  width: 100%;
+}
+
+.label, .tags a {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+.label:empty, .tags a:empty {
+  display: none;
+}
+.btn .label, a.comment-reply-link .label, #cancel-comment-reply-link .label, .form-submit input[type='submit'] .label, .btn .tags a, .tags .btn a, a.comment-reply-link .tags a, .tags a.comment-reply-link a, #cancel-comment-reply-link .tags a, .tags #cancel-comment-reply-link a, .form-submit input[type='submit'] .tags a, .tags .form-submit input[type='submit'] a {
+  position: relative;
+  top: -1px;
+}
+
+a.label:hover, .tags a:hover, a.label:focus, .tags a:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.label-default, .tags a {
+  background-color: #777777;
+}
+.label-default[href]:hover, .tags a[href]:hover, .label-default[href]:focus, .tags a[href]:focus {
+  background-color: #5e5e5e;
+}
+
+.label-primary {
+  background-color: #337ab7;
+}
+.label-primary[href]:hover, .label-primary[href]:focus {
+  background-color: #286090;
+}
+
+.label-success {
+  background-color: #5cb85c;
+}
+.label-success[href]:hover, .label-success[href]:focus {
+  background-color: #449d44;
+}
+
+.label-info {
+  background-color: #5bc0de;
+}
+.label-info[href]:hover, .label-info[href]:focus {
+  background-color: #31b0d5;
+}
+
+.label-warning {
+  background-color: #f0ad4e;
+}
+.label-warning[href]:hover, .label-warning[href]:focus {
+  background-color: #ec971f;
+}
+
+.label-danger {
+  background-color: #d9534f;
+}
+.label-danger[href]:hover, .label-danger[href]:focus {
+  background-color: #c9302c;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: inherit;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+output {
+  display: block;
+  padding-top: 7px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555555;
+}
+
+.form-control, .comment-form-author input,
+.comment-form-author textarea,
+.comment-form-email input,
+.comment-form-email textarea,
+.comment-form-url input,
+.comment-form-url textarea,
+.comment-form-comment input,
+.comment-form-comment textarea {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.form-control:focus, .comment-form-author input:focus,
+.comment-form-author textarea:focus,
+.comment-form-email input:focus,
+.comment-form-email textarea:focus,
+.comment-form-url input:focus,
+.comment-form-url textarea:focus,
+.comment-form-comment input:focus,
+.comment-form-comment textarea:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.form-control::-moz-placeholder, .comment-form-author input::-moz-placeholder,
+.comment-form-author textarea::-moz-placeholder,
+.comment-form-email input::-moz-placeholder,
+.comment-form-email textarea::-moz-placeholder,
+.comment-form-url input::-moz-placeholder,
+.comment-form-url textarea::-moz-placeholder,
+.comment-form-comment input::-moz-placeholder,
+.comment-form-comment textarea::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder, .comment-form-author input:-ms-input-placeholder,
+.comment-form-author textarea:-ms-input-placeholder,
+.comment-form-email input:-ms-input-placeholder,
+.comment-form-email textarea:-ms-input-placeholder,
+.comment-form-url input:-ms-input-placeholder,
+.comment-form-url textarea:-ms-input-placeholder,
+.comment-form-comment input:-ms-input-placeholder,
+.comment-form-comment textarea:-ms-input-placeholder {
+  color: #999;
+}
+.form-control::-webkit-input-placeholder, .comment-form-author input::-webkit-input-placeholder,
+.comment-form-author textarea::-webkit-input-placeholder,
+.comment-form-email input::-webkit-input-placeholder,
+.comment-form-email textarea::-webkit-input-placeholder,
+.comment-form-url input::-webkit-input-placeholder,
+.comment-form-url textarea::-webkit-input-placeholder,
+.comment-form-comment input::-webkit-input-placeholder,
+.comment-form-comment textarea::-webkit-input-placeholder {
+  color: #999;
+}
+.form-control[disabled], .comment-form-author input[disabled],
+.comment-form-author textarea[disabled],
+.comment-form-email input[disabled],
+.comment-form-email textarea[disabled],
+.comment-form-url input[disabled],
+.comment-form-url textarea[disabled],
+.comment-form-comment input[disabled],
+.comment-form-comment textarea[disabled], .form-control[readonly], .comment-form-author input[readonly],
+.comment-form-author textarea[readonly],
+.comment-form-email input[readonly],
+.comment-form-email textarea[readonly],
+.comment-form-url input[readonly],
+.comment-form-url textarea[readonly],
+.comment-form-comment input[readonly],
+.comment-form-comment textarea[readonly], fieldset[disabled] .form-control, fieldset[disabled] .comment-form-author input, .comment-form-author fieldset[disabled] input,
+fieldset[disabled] .comment-form-author textarea,
+.comment-form-author fieldset[disabled] textarea,
+fieldset[disabled] .comment-form-email input,
+.comment-form-email fieldset[disabled] input,
+fieldset[disabled] .comment-form-email textarea,
+.comment-form-email fieldset[disabled] textarea,
+fieldset[disabled] .comment-form-url input,
+.comment-form-url fieldset[disabled] input,
+fieldset[disabled] .comment-form-url textarea,
+.comment-form-url fieldset[disabled] textarea,
+fieldset[disabled] .comment-form-comment input,
+.comment-form-comment fieldset[disabled] input,
+fieldset[disabled] .comment-form-comment textarea,
+.comment-form-comment fieldset[disabled] textarea {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+
+textarea.form-control,
+.comment-form-author textarea,
+.comment-form-email textarea,
+.comment-form-url textarea,
+.comment-form-comment textarea {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"] {
+    line-height: 34px;
+  }
+  input[type="date"].input-sm, .input-group-sm input[type="date"],
+  input[type="time"].input-sm, .input-group-sm
+  input[type="time"],
+  input[type="datetime-local"].input-sm, .input-group-sm
+  input[type="datetime-local"],
+  input[type="month"].input-sm, .input-group-sm
+  input[type="month"] {
+    line-height: 30px;
+  }
+  input[type="date"].input-lg, .input-group-lg input[type="date"],
+  input[type="time"].input-lg, .input-group-lg
+  input[type="time"],
+  input[type="datetime-local"].input-lg, .input-group-lg
+  input[type="datetime-local"],
+  input[type="month"].input-lg, .input-group-lg
+  input[type="month"] {
+    line-height: 46px;
+  }
+}
+.form-group, .comment-form-author,
+.comment-form-email,
+.comment-form-url,
+.comment-form-comment {
+  margin-bottom: 15px;
+}
+
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.radio label,
+.checkbox label {
+  min-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px \9;
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: -5px;
+}
+
+.radio-inline,
+.checkbox-inline {
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+input[type="radio"][disabled], input[type="radio"].disabled, fieldset[disabled] input[type="radio"],
+input[type="checkbox"][disabled],
+input[type="checkbox"].disabled, fieldset[disabled]
+input[type="checkbox"] {
+  cursor: not-allowed;
+}
+
+.radio-inline.disabled, fieldset[disabled] .radio-inline,
+.checkbox-inline.disabled, fieldset[disabled]
+.checkbox-inline {
+  cursor: not-allowed;
+}
+
+.radio.disabled label, fieldset[disabled] .radio label,
+.checkbox.disabled label, fieldset[disabled]
+.checkbox label {
+  cursor: not-allowed;
+}
+
+.form-control-static {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 0;
+}
+.form-control-static.input-lg, .form-control-static.input-sm {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.input-sm {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+select.input-sm {
+  height: 30px;
+  line-height: 30px;
+}
+
+textarea.input-sm,
+select[multiple].input-sm {
+  height: auto;
+}
+
+.form-group-sm .form-control, .form-group-sm .comment-form-author input, .comment-form-author .form-group-sm input,
+.form-group-sm .comment-form-author textarea,
+.comment-form-author .form-group-sm textarea,
+.form-group-sm .comment-form-email input,
+.comment-form-email .form-group-sm input,
+.form-group-sm .comment-form-email textarea,
+.comment-form-email .form-group-sm textarea,
+.form-group-sm .comment-form-url input,
+.comment-form-url .form-group-sm input,
+.form-group-sm .comment-form-url textarea,
+.comment-form-url .form-group-sm textarea,
+.form-group-sm .comment-form-comment input,
+.comment-form-comment .form-group-sm input,
+.form-group-sm .comment-form-comment textarea,
+.comment-form-comment .form-group-sm textarea {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.form-group-sm select.form-control {
+  height: 30px;
+  line-height: 30px;
+}
+.form-group-sm textarea.form-control,
+.form-group-sm .comment-form-author textarea,
+.comment-form-author .form-group-sm textarea,
+.form-group-sm .comment-form-email textarea,
+.comment-form-email .form-group-sm textarea,
+.form-group-sm .comment-form-url textarea,
+.comment-form-url .form-group-sm textarea,
+.form-group-sm .comment-form-comment textarea,
+.comment-form-comment .form-group-sm textarea,
+.form-group-sm select[multiple].form-control {
+  height: auto;
+}
+.form-group-sm .form-control-static {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.input-lg {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33333;
+  border-radius: 6px;
+}
+
+select.input-lg {
+  height: 46px;
+  line-height: 46px;
+}
+
+textarea.input-lg,
+select[multiple].input-lg {
+  height: auto;
+}
+
+.form-group-lg .form-control, .form-group-lg .comment-form-author input, .comment-form-author .form-group-lg input,
+.form-group-lg .comment-form-author textarea,
+.comment-form-author .form-group-lg textarea,
+.form-group-lg .comment-form-email input,
+.comment-form-email .form-group-lg input,
+.form-group-lg .comment-form-email textarea,
+.comment-form-email .form-group-lg textarea,
+.form-group-lg .comment-form-url input,
+.comment-form-url .form-group-lg input,
+.form-group-lg .comment-form-url textarea,
+.comment-form-url .form-group-lg textarea,
+.form-group-lg .comment-form-comment input,
+.comment-form-comment .form-group-lg input,
+.form-group-lg .comment-form-comment textarea,
+.comment-form-comment .form-group-lg textarea {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33333;
+  border-radius: 6px;
+}
+.form-group-lg select.form-control {
+  height: 46px;
+  line-height: 46px;
+}
+.form-group-lg textarea.form-control,
+.form-group-lg .comment-form-author textarea,
+.comment-form-author .form-group-lg textarea,
+.form-group-lg .comment-form-email textarea,
+.comment-form-email .form-group-lg textarea,
+.form-group-lg .comment-form-url textarea,
+.comment-form-url .form-group-lg textarea,
+.form-group-lg .comment-form-comment textarea,
+.comment-form-comment .form-group-lg textarea,
+.form-group-lg select[multiple].form-control {
+  height: auto;
+}
+.form-group-lg .form-control-static {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33333;
+}
+
+.has-feedback {
+  position: relative;
+}
+.has-feedback .form-control, .has-feedback .comment-form-author input, .comment-form-author .has-feedback input,
+.has-feedback .comment-form-author textarea,
+.comment-form-author .has-feedback textarea,
+.has-feedback .comment-form-email input,
+.comment-form-email .has-feedback input,
+.has-feedback .comment-form-email textarea,
+.comment-form-email .has-feedback textarea,
+.has-feedback .comment-form-url input,
+.comment-form-url .has-feedback input,
+.has-feedback .comment-form-url textarea,
+.comment-form-url .has-feedback textarea,
+.has-feedback .comment-form-comment input,
+.comment-form-comment .has-feedback input,
+.has-feedback .comment-form-comment textarea,
+.comment-form-comment .has-feedback textarea {
+  padding-right: 42.5px;
+}
+
+.form-control-feedback {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.input-lg + .form-control-feedback {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+}
+
+.input-sm + .form-control-feedback {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline, .has-success.radio label, .has-success.checkbox label, .has-success.radio-inline label, .has-success.checkbox-inline label {
+  color: #3c763d;
+}
+.has-success .form-control, .has-success .comment-form-author input, .comment-form-author .has-success input,
+.has-success .comment-form-author textarea,
+.comment-form-author .has-success textarea,
+.has-success .comment-form-email input,
+.comment-form-email .has-success input,
+.has-success .comment-form-email textarea,
+.comment-form-email .has-success textarea,
+.has-success .comment-form-url input,
+.comment-form-url .has-success input,
+.has-success .comment-form-url textarea,
+.comment-form-url .has-success textarea,
+.has-success .comment-form-comment input,
+.comment-form-comment .has-success input,
+.has-success .comment-form-comment textarea,
+.comment-form-comment .has-success textarea {
+  border-color: #3c763d;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.has-success .form-control:focus, .has-success .comment-form-author input:focus, .comment-form-author .has-success input:focus,
+.has-success .comment-form-author textarea:focus,
+.comment-form-author .has-success textarea:focus,
+.has-success .comment-form-email input:focus,
+.comment-form-email .has-success input:focus,
+.has-success .comment-form-email textarea:focus,
+.comment-form-email .has-success textarea:focus,
+.has-success .comment-form-url input:focus,
+.comment-form-url .has-success input:focus,
+.has-success .comment-form-url textarea:focus,
+.comment-form-url .has-success textarea:focus,
+.has-success .comment-form-comment input:focus,
+.comment-form-comment .has-success input:focus,
+.has-success .comment-form-comment textarea:focus,
+.comment-form-comment .has-success textarea:focus {
+  border-color: #2b542c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+}
+.has-success .input-group-addon {
+  color: #3c763d;
+  border-color: #3c763d;
+  background-color: #dff0d8;
+}
+.has-success .form-control-feedback {
+  color: #3c763d;
+}
+
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline, .has-warning.radio label, .has-warning.checkbox label, .has-warning.radio-inline label, .has-warning.checkbox-inline label {
+  color: #8a6d3b;
+}
+.has-warning .form-control, .has-warning .comment-form-author input, .comment-form-author .has-warning input,
+.has-warning .comment-form-author textarea,
+.comment-form-author .has-warning textarea,
+.has-warning .comment-form-email input,
+.comment-form-email .has-warning input,
+.has-warning .comment-form-email textarea,
+.comment-form-email .has-warning textarea,
+.has-warning .comment-form-url input,
+.comment-form-url .has-warning input,
+.has-warning .comment-form-url textarea,
+.comment-form-url .has-warning textarea,
+.has-warning .comment-form-comment input,
+.comment-form-comment .has-warning input,
+.has-warning .comment-form-comment textarea,
+.comment-form-comment .has-warning textarea {
+  border-color: #8a6d3b;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.has-warning .form-control:focus, .has-warning .comment-form-author input:focus, .comment-form-author .has-warning input:focus,
+.has-warning .comment-form-author textarea:focus,
+.comment-form-author .has-warning textarea:focus,
+.has-warning .comment-form-email input:focus,
+.comment-form-email .has-warning input:focus,
+.has-warning .comment-form-email textarea:focus,
+.comment-form-email .has-warning textarea:focus,
+.has-warning .comment-form-url input:focus,
+.comment-form-url .has-warning input:focus,
+.has-warning .comment-form-url textarea:focus,
+.comment-form-url .has-warning textarea:focus,
+.has-warning .comment-form-comment input:focus,
+.comment-form-comment .has-warning input:focus,
+.has-warning .comment-form-comment textarea:focus,
+.comment-form-comment .has-warning textarea:focus {
+  border-color: #66512c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+}
+.has-warning .input-group-addon {
+  color: #8a6d3b;
+  border-color: #8a6d3b;
+  background-color: #fcf8e3;
+}
+.has-warning .form-control-feedback {
+  color: #8a6d3b;
+}
+
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
+  color: #a94442;
+}
+.has-error .form-control, .has-error .comment-form-author input, .comment-form-author .has-error input,
+.has-error .comment-form-author textarea,
+.comment-form-author .has-error textarea,
+.has-error .comment-form-email input,
+.comment-form-email .has-error input,
+.has-error .comment-form-email textarea,
+.comment-form-email .has-error textarea,
+.has-error .comment-form-url input,
+.comment-form-url .has-error input,
+.has-error .comment-form-url textarea,
+.comment-form-url .has-error textarea,
+.has-error .comment-form-comment input,
+.comment-form-comment .has-error input,
+.has-error .comment-form-comment textarea,
+.comment-form-comment .has-error textarea {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.has-error .form-control:focus, .has-error .comment-form-author input:focus, .comment-form-author .has-error input:focus,
+.has-error .comment-form-author textarea:focus,
+.comment-form-author .has-error textarea:focus,
+.has-error .comment-form-email input:focus,
+.comment-form-email .has-error input:focus,
+.has-error .comment-form-email textarea:focus,
+.comment-form-email .has-error textarea:focus,
+.has-error .comment-form-url input:focus,
+.comment-form-url .has-error input:focus,
+.has-error .comment-form-url textarea:focus,
+.comment-form-url .has-error textarea:focus,
+.has-error .comment-form-comment input:focus,
+.comment-form-comment .has-error input:focus,
+.has-error .comment-form-comment textarea:focus,
+.comment-form-comment .has-error textarea:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+.has-error .input-group-addon {
+  color: #a94442;
+  border-color: #a94442;
+  background-color: #f2dede;
+}
+.has-error .form-control-feedback {
+  color: #a94442;
+}
+
+.has-feedback label ~ .form-control-feedback {
+  top: 25px;
+}
+.has-feedback label.sr-only ~ .form-control-feedback {
+  top: 0;
+}
+
+.help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
+
+@media (min-width: 768px) {
+  .form-inline .form-group, .form-inline .comment-form-author,
+  .form-inline .comment-form-email,
+  .form-inline .comment-form-url,
+  .form-inline .comment-form-comment {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .form-inline .form-control, .form-inline .comment-form-author input, .comment-form-author .form-inline input,
+  .form-inline .comment-form-author textarea,
+  .comment-form-author .form-inline textarea,
+  .form-inline .comment-form-email input,
+  .comment-form-email .form-inline input,
+  .form-inline .comment-form-email textarea,
+  .comment-form-email .form-inline textarea,
+  .form-inline .comment-form-url input,
+  .comment-form-url .form-inline input,
+  .form-inline .comment-form-url textarea,
+  .comment-form-url .form-inline textarea,
+  .form-inline .comment-form-comment input,
+  .comment-form-comment .form-inline input,
+  .form-inline .comment-form-comment textarea,
+  .comment-form-comment .form-inline textarea {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  .form-inline .form-control-static {
+    display: inline-block;
+  }
+  .form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+  .form-inline .input-group .input-group-addon,
+  .form-inline .input-group .input-group-btn,
+  .form-inline .input-group .form-control,
+  .form-inline .input-group .comment-form-author input,
+  .comment-form-author .form-inline .input-group input,
+  .form-inline .input-group .comment-form-author textarea,
+  .comment-form-author .form-inline .input-group textarea,
+  .form-inline .input-group .comment-form-email input,
+  .comment-form-email .form-inline .input-group input,
+  .form-inline .input-group .comment-form-email textarea,
+  .comment-form-email .form-inline .input-group textarea,
+  .form-inline .input-group .comment-form-url input,
+  .comment-form-url .form-inline .input-group input,
+  .form-inline .input-group .comment-form-url textarea,
+  .comment-form-url .form-inline .input-group textarea,
+  .form-inline .input-group .comment-form-comment input,
+  .comment-form-comment .form-inline .input-group input,
+  .form-inline .input-group .comment-form-comment textarea,
+  .comment-form-comment .form-inline .input-group textarea {
+    width: auto;
+  }
+  .form-inline .input-group > .form-control, .form-inline .comment-form-author .input-group > input, .comment-form-author .form-inline .input-group > input,
+  .form-inline .comment-form-author .input-group > textarea,
+  .comment-form-author .form-inline .input-group > textarea,
+  .form-inline .comment-form-email .input-group > input,
+  .comment-form-email .form-inline .input-group > input,
+  .form-inline .comment-form-email .input-group > textarea,
+  .comment-form-email .form-inline .input-group > textarea,
+  .form-inline .comment-form-url .input-group > input,
+  .comment-form-url .form-inline .input-group > input,
+  .form-inline .comment-form-url .input-group > textarea,
+  .comment-form-url .form-inline .input-group > textarea,
+  .form-inline .comment-form-comment .input-group > input,
+  .comment-form-comment .form-inline .input-group > input,
+  .form-inline .comment-form-comment .input-group > textarea,
+  .comment-form-comment .form-inline .input-group > textarea {
+    width: 100%;
+  }
+  .form-inline .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .form-inline .radio,
+  .form-inline .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .form-inline .radio label,
+  .form-inline .checkbox label {
+    padding-left: 0;
+  }
+  .form-inline .radio input[type="radio"],
+  .form-inline .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+  .form-inline .has-feedback .form-control-feedback {
+    top: 0;
+  }
+}
+
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+.form-horizontal .radio,
+.form-horizontal .checkbox {
+  min-height: 27px;
+}
+.form-horizontal .form-group, .form-horizontal .comment-form-author,
+.form-horizontal .comment-form-email,
+.form-horizontal .comment-form-url,
+.form-horizontal .comment-form-comment {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.form-horizontal .form-group:before, .form-horizontal .comment-form-author:before,
+.form-horizontal .comment-form-email:before,
+.form-horizontal .comment-form-url:before,
+.form-horizontal .comment-form-comment:before, .form-horizontal .form-group:after, .form-horizontal .comment-form-author:after,
+.form-horizontal .comment-form-email:after,
+.form-horizontal .comment-form-url:after,
+.form-horizontal .comment-form-comment:after {
+  content: " ";
+  display: table;
+}
+.form-horizontal .form-group:after, .form-horizontal .comment-form-author:after,
+.form-horizontal .comment-form-email:after,
+.form-horizontal .comment-form-url:after,
+.form-horizontal .comment-form-comment:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+}
+.form-horizontal .has-feedback .form-control-feedback {
+  right: 15px;
+}
+@media (min-width: 768px) {
+  .form-horizontal .form-group-lg .control-label {
+    padding-top: 14.33333px;
+  }
+}
+@media (min-width: 768px) {
+  .form-horizontal .form-group-sm .control-label {
+    padding-top: 6px;
+  }
+}
+
+.widget {
+  margin-bottom: 18px;
+}
+
+.widgettitle {
+  margin-bottom: 9px;
+}
+
+#tag-cloud {
+  margin-bottom: 18px;
+  line-height: 160%;
+}
+
+/* override standard link hover for the tag cloud widget */
+#tag-cloud a:hover,
+.tags a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#tag-cloud a {
+  white-space: pre;
+  text-transform: uppercase;
+}
+
+/* change default form padding for search */
+.widget_search form {
+  padding-left: 0;
+}
+
+/* calendar widget */
+#calendar_wrap {
+  border: 1px solid #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+#wp-calendar {
+  width: 100%;
+}
+
+#wp-calendar caption {
+  font-weight: bold;
+  padding: 8px;
+}
+
+#wp-calendar tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+#wp-calendar tr:last-child {
+  border-bottom: none;
+}
+
+#wp-calendar td {
+  text-align: center;
+  padding: 8px 0;
+}
+
+blockquote.pull-left {
+  padding-right: 15px;
+}
+
+/*
+
+WP-Bootstrap - Gallery
+
+*/
+.thumbnails {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.gallery-item .thumbnail {
+  display: inline-block;
+  border-width: 0;
+}
+
+/*# sourceMappingURL=orangepress-core-styles.min.css.map */

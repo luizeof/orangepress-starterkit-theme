@@ -10,7 +10,7 @@
 						
 						<header>
 							
-							<div class="page-header"><h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1></div>
+							<div class="page-header"><h1 class="page-title" itemprop="headline"><i class="fa fa-heartbeat"></i> <?php the_title(); ?></h1></div>
 						
 						</header> <!-- end article header -->
 					

@@ -1,39 +1,92 @@
-'use strict';
 module.exports = function(grunt) {
 
+  // Project configuration.
   grunt.initConfig({
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
+    
+    pkg: grunt.file.readJSON('package.json'),      
+    
+    shell: {
+      gitCachePassword: {
+        command: "git config --global credential.helper cache || git push --all"
       },
-      all: [
-        'library/js/scripts.js',
-        'bower_components/bootstrap/js/*.js'
-      ]
-    },
-    less: {
-      dist: {
-        files: {
-          'library/dist/css/styles.css': [
-            'library/less/styles.less'
-          ]
-        },
-        options: {
-          compress: true,
-          // LESS source map
-          // To enable, set sourceMap to true and update sourceMapRootpath based on your install
-          sourceMap: true,
-          sourceMapFilename: 'library/dist/css/styles.css.map',
-          sourceMapRootpath: '/wp-content/themes/wordpress-bootstrap/' // If you name your theme something different you may need to change this
-        }
+      gitAddAll: {
+        command: "git add -A"
+      },
+      gitPush: {
+        command: [
+                'git push --all',
+                'git push --tags'
+            ].join('&&')
+      },
+      gitdoc: {
+        command: [
+                "sh .changelog_generator.sh > changelog.txt",
+                "git log --graph --oneline --decorate > history.txt"
+            ].join('&&')
+      },
+      changelog: {
+        command: "sh .changelog_generator.sh > changelog.txt"
+      },
+      history: {
+        command: "git log --graph --oneline --decorate > history.txt"
       }
     },
+    
+    bump: {
+        options: {
+          files: ['package.json'],
+          commit: false,
+          createTag: false,
+          push: false,
+          globalReplace: false
+        }
+      },        
+    
+
+    // Bump version numbers for the theme in style.css and functions.php
+    version: {
+        css: {
+            options: {
+                prefix: 'Version\\:\\s'
+            },
+            src: [ 'style.scss' ],
+        },
+        php: {
+            options: {
+                prefix: '\@version\\s+'
+            },
+            src: [ 'functions.php' ],
+        }
+    },   
+    
+    
+    // Commit and tag the new version   
+       gitcommit: {
+            version: {
+                options: {
+                    message: 'Release: v<%= pkg.version %>'
+                }
+            }
+        },
+        gittag: {
+            version: {
+                options: {
+                    tag: 'v<%= pkg.version %>',
+                    message: 'v<%= pkg.version %>'
+                }
+            }
+          },
+        
+    
     uglify: {
       dist: {
         files: {
-          'library/dist/js/scripts.min.js': [
-            'library/js/*.js'
-          ]
+          'orangepress-core-frameworks.min.js': [
+            'bower_components/jquery/dist/jquery.js', 'bower_components/bootstrap/dist/js/bootstrap.js'
+          ],
+          'orangepress-core-scripts.min.js': [
+            'core-js/*.js'
+          ]          
           // Consider adding bootstrap js files here to consolidate your browser requests
         },
         options: {
@@ -42,93 +95,61 @@ module.exports = function(grunt) {
           // sourceMappingURL: '/app/themes/roots/assets/js/scripts.min.js.map'
         }
       }
-    },
-    grunticon: {
-      myIcons: {
-          files: [{
-              expand: true,
-              cwd: 'library/img',
-              src: ['*.svg', '*.png'],
-              dest: "library/img"
-          }],
-          options: {
-          }
-      }
-    },
-    version: {
-      assets: {
-        files: {
-          'functions.php': ['library/dist/css/styles.css', 'library/dist/js/scripts.min.js']
+    }, // uglify
+    
+    sass: {                              // Task 
+      dist: {                            // Target 
+        options: {                       // Target options 
+          style: 'expanded'
+        },
+        files: {                         // Dictionary of files 
+          'orangepress-core-frameworks.min.css': 'core-scss/core-frameworks.scss',
+          'orangepress-core-styles.min.css': 'core-scss/core-styles.scss',
+          'style.css': 'style.scss'
         }
       }
-    },
-    watch: {
-      less: {
-        files: [
-          'bower_components/bootstrap/less/*.less',
-          'bower_components/font-awesome/less/*.less',
-          'library/less/*.less'
-        ],
-        tasks: ['less', 'version']
-      },
-      js: {
-        files: [
-          '<%= jshint.all %>'
-        ],
-        tasks: ['uglify']
-      },
-      livereload: {
-        // Browser live reloading
-        // https://github.com/gruntjs/grunt-contrib-watch#live-reloading
-        options: {
-          livereload: true
-        },
-        files: [
-          'library/dist/css/styles.css',
-          'library/js/*',
-          'style.css',
-          '*.php'
-        ]
-      }
-    },
-    clean: {
-      dist: [
-        'library/dist/css',
-        'library/dist/js'
-      ]
-    }
+    } // sass
+    
   });
+  
 
-  // Load tasks
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
+  // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-wp-assets');
-  grunt.loadNpmTasks('grunt-grunticon');
-  grunt.loadNpmTasks('grunt-svgstore');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-version');
+  grunt.loadNpmTasks('grunt-git');
+  grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-changelog');
+  grunt.loadNpmTasks('grunt-bump');
+  
 
-  // Register tasks
-  grunt.registerTask('default', [
-    'clean',
-    'less',
-    'uglify',
-    'grunticon',
-    'version'
-  ]);
+  // Default task(s).
+  grunt.registerTask('default', ['uglify','sass']);
+  
+  grunt.registerTask('bumpMajor', ['bump:major','version']);
+  grunt.registerTask('bumpMinor', ['bump:minor','version']);
+  grunt.registerTask('bumpPatch', ['bump:patch','version']);
+  
+  // Release task
+  grunt.registerTask( 'prepareRelease', [ // Prepare for Release
+                                          'shell:gitCachePassword',
+                                          'version',
+                                          'uglify',
+                                          'sass',
+                                          'shell:gitAddAll',
+                                          'gitcommit:version',
+                                          'gittag:version',
+                                          'shell:gitPush',
+                                          'shell:gitdoc'
+                                          ]);
 
-  grunt.registerTask('build', [
-    'clean:dist',
-    'less',
-    'uglify',
-    'grunticon',
-    'version'
-  ]);
-
-  grunt.registerTask('dev', [
-    'grunticon',
-    'watch'
-  ]);
+  // By default, the command release makes a bump patch
+  grunt.registerTask( 'release', ['releasePatch'] );
+  // Make a patch release
+  grunt.registerTask( 'releaseMajor', ['bump:major','prepareRelease']);
+  grunt.registerTask( 'releaseMinor', ['bump:minor','prepareRelease']);
+  grunt.registerTask( 'releasePatch', ['bump:patch','prepareRelease']);
+  
+  grunt.registerTask( 'doc', ['shell:gitdoc'] );
 
 };

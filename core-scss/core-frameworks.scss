@@ -1,0 +1,14 @@
+/*
+  Frameworks
+*/
+
+// Reset the icon font paths
+
+$fa-font-path: "bower_components/font-awesome/fonts";
+$icon-font-path: "bower_components/bootstrap/fonts/";
+
+// Import the Bootstrap LESS here
+
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
+@import 'bower_components/font-awesome/scss/font-awesome.scss';
+
