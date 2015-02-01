@@ -25,6 +25,9 @@ module.exports = function(grunt) {
       },
       changelog: {
         command: "sh .changelog_generator.sh > changelog.txt"
+      },
+      history: {
+        command: "git log --graph --oneline --decorate > history.txt"
       }
     },
     
@@ -127,15 +130,28 @@ module.exports = function(grunt) {
   grunt.registerTask('bumpPatch', ['bump:patch','version']);
   
   // Release task
-  grunt.registerTask( 'release', [ 'version',
-                                   'uglify',
-                                   'sass',
-                                   'shell:gitAddAll',
-                                   'gitcommit:version',
-                                   'gittag:version',
-                                   'shell:gitPushAll',
-                                   'shell:gitPushTags',
-                                   'shell:changelog' ]);
+
+  grunt.registerTask( 'release', ['releaseMinor']);
+  
+  grunt.registerTask( 'releaseMinor', ['bump:patch',
+                                  'version',
+                                  'uglify',
+                                  'sass',
+                                  'shell:gitAddAll',
+                                  'gitcommit:version',
+                                  'gittag:version',
+                                  'shell:gitPushAll',
+                                  'shell:gitPushTags']);
+  
+  grunt.registerTask( 'releaseMinor', ['bump:minor',
+                                       'version',
+                                       'uglify',
+                                       'sass',
+                                       'shell:gitAddAll',
+                                       'gitcommit:version',
+                                       'gittag:version',
+                                       'shell:gitPushAll',
+                                       'shell:gitPushTags']);
 
  
 
