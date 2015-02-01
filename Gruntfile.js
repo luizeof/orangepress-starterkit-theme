@@ -20,6 +20,12 @@ module.exports = function(grunt) {
       gitAddAll: {
         command: "git add -A"
       },
+      gitPush: {
+        command: [
+                'git push --all',
+                'git push --tags'
+            ].join('&&')
+      },
       gitPushAll: {
         command: "git push --all"
       },
@@ -141,8 +147,10 @@ module.exports = function(grunt) {
                                           'shell:gitAddAll',
                                           'gitcommit:version',
                                           'gittag:version',
-                                          'shell:gitPushAll',
-                                          'shell:gitPushTags']);
+                                          //'shell:gitPushAll',
+                                          //'shell:gitPushTags'
+                                          'shell:gitPush'
+                                          ]);
 
   // By default, the command release makes a bump patch
   grunt.registerTask( 'release', ['releasePatch'] );
