@@ -3,15 +3,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     
-    pkg: grunt.file.readJSON('package.json'),    
-    
-    changelog: {
-      sample: {
-        options: {
-          // Task-specific options go here. 
-        }
-      }
-    },    
+    pkg: grunt.file.readJSON('package.json'),      
     
     shell: {
       gitCachePassword: {
@@ -24,6 +16,12 @@ module.exports = function(grunt) {
         command: [
                 'git push --all',
                 'git push --tags'
+            ].join('&&')
+      },
+      gitdoc: {
+        command: [
+                "sh .changelog_generator.sh > changelog.txt",
+                "git log --graph --oneline --decorate > history.txt"
             ].join('&&')
       },
       changelog: {
@@ -150,7 +148,7 @@ module.exports = function(grunt) {
   grunt.registerTask( 'releaseMajor', ['bump:major','prepareRelease']);
   grunt.registerTask( 'releaseMinor', ['bump:minor','prepareRelease']);
   grunt.registerTask( 'releasePatch', ['bump:patch','prepareRelease']);
-
- 
+  
+  grunt.registerTask( 'doc', ['shell:gitdoc'] );
 
 };
