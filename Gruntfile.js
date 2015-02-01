@@ -14,6 +14,9 @@ module.exports = function(grunt) {
     },    
     
     shell: {
+      gitCachePassword: {
+        command: "git config --global credential.helper cache || git push --all"
+      },
       gitAddAll: {
         command: "git add -A"
       },
@@ -131,6 +134,7 @@ module.exports = function(grunt) {
   
   // Release task
   grunt.registerTask( 'prepareRelease', [ // Prepare for Release
+                                          'shell:gitCachePassword',
                                           'version',
                                           'uglify',
                                           'sass',
@@ -143,7 +147,9 @@ module.exports = function(grunt) {
   // By default, the command release makes a bump patch
   grunt.registerTask( 'release', ['releasePatch'] );
   // Make a patch release
+  grunt.registerTask( 'releaseMajor', ['bump:major','prepareRelease']);
   grunt.registerTask( 'releaseMinor', ['bump:minor','prepareRelease']);
+  grunt.registerTask( 'releasePatch', ['bump:patch','prepareRelease']);
 
  
 
