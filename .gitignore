@@ -5,3 +5,4 @@ sitemap.xml
 sitemap.xml.gz
 bower_components/
 node_modules/
+.sass-cache/

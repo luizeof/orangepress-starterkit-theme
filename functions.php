@@ -1,4 +1,11 @@
 <?php
+/**
+ * Orangepress functions and definitions
+ *
+ * @package WordPress
+ * @subpackage Orangepress
+ * @version 1.0.2
+ */
 
 // Add Translation Option
 load_theme_textdomain( 'wpbootstrap', TEMPLATEPATH.'/languages' );
