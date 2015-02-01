@@ -50,7 +50,7 @@ module.exports = function(grunt) {
        gitcommit: {
             version: {
                 options: {
-                    message: 'New version: <%= pkg.version %>'
+                    message: 'Release: v<%= pkg.version %>'
                 }
             }
         },
