@@ -547,13 +547,17 @@ add_filter('nav_menu_css_class', 'wp_bootstrap_add_active_class', 10, 2 );
 // enqueue styles
 if( !function_exists("orangepress_theme_styles") ) {  
     function orangepress_theme_styles() { 
-        // This is the compiled css file from LESS - this means you compile the LESS file locally and put it in the appropriate directory if you want to make any changes to the master bootstrap.css.
-        wp_register_style( 'orangepress-core-styles', get_template_directory_uri() . '/css/core-styles.min.css', array(), '1.0', 'all' );
+
+        wp_register_style( 'orangepress-core-frameworks', get_template_directory_uri() . '/orangepress-core-frameworks.min.css', array(), '1.0', 'all' );
+        wp_enqueue_style( 'orangepress-core-frameworks' );
+
+        wp_register_style( 'orangepress-core-styles', get_template_directory_uri() . '/orangepress-core-styles.min.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'orangepress-core-styles' );
 
         // For child themes
         wp_register_style( 'orangepress-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'orangepress-style' );
+      
     }
 }
 add_action( 'wp_enqueue_scripts', 'orangepress_theme_styles' );
@@ -566,13 +570,20 @@ if( !function_exists( "orangepress_theme_js" ) ) {
       if ( is_singular() AND comments_open() AND ( get_option( 'thread_comments' ) == 1) ) 
         wp_enqueue_script( 'comment-reply' );
     }
-
+    
     wp_register_script( 'orangepress-core-script', 
-      get_template_directory_uri() . '/js/core-scripts.min.js',
+      get_template_directory_uri() . '/orangepress-core-frameworks.min.js',
       null, 
       '1.2',
       true);
-  
+
+    wp_register_script( 'orangepress-core-script', 
+      get_template_directory_uri() . '/orangepress-core-scripts.min.js',
+      null, 
+      '1.2',
+      true);
+
+    wp_enqueue_script( 'orangepress-core-frameworks' );    
     wp_enqueue_script( 'orangepress-core-script' );
     
   }

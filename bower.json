@@ -24,6 +24,12 @@
     "tests"
   ],
   "dependencies": {
-    "modernizer": "~2.8.2"
+    "jquery": "2.1.0"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.3",
+    "modernizer": "~2.8.2",
+    "font-awesome": "~4.3.0",
+    "bootstrap": "~3.3.1"    
   }
 }

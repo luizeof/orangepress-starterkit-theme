@@ -7,9 +7,12 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          'js/core-scripts.min.js': [
-            'library/js/*.js'
-          ]
+          'orangepress-core-frameworks.min.js': [
+            'bower_components/jquery/dist/jquery.js', 'bower_components/bootstrap/dist/js/bootstrap.js'
+          ],
+          'orangepress-core-scripts.min.js': [
+            'core-js/*.js'
+          ]          
           // Consider adding bootstrap js files here to consolidate your browser requests
         },
         options: {
@@ -26,8 +29,9 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {                         // Dictionary of files 
-          'main.css': 'main.scss',       // 'destination': 'source' 
-          'widgets.css': 'widgets.scss'
+          'orangepress-core-frameworks.min.css': 'core-scss/core-frameworks.scss',
+          'orangepress-core-styles.min.css': 'core-scss/core-styles.scss',
+          'style.css': 'style.scss'
         }
       }
     } // sass
