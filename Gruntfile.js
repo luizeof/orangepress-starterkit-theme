@@ -130,28 +130,20 @@ module.exports = function(grunt) {
   grunt.registerTask('bumpPatch', ['bump:patch','version']);
   
   // Release task
+  grunt.registerTask( 'prepareRelease', [ // Prepare for Release
+                                          'version',
+                                          'uglify',
+                                          'sass',
+                                          'shell:gitAddAll',
+                                          'gitcommit:version',
+                                          'gittag:version',
+                                          'shell:gitPushAll',
+                                          'shell:gitPushTags']);
 
-  grunt.registerTask( 'release', ['releaseMinor']);
-  
-  grunt.registerTask( 'releaseMinor', ['bump:patch',
-                                  'version',
-                                  'uglify',
-                                  'sass',
-                                  'shell:gitAddAll',
-                                  'gitcommit:version',
-                                  'gittag:version',
-                                  'shell:gitPushAll',
-                                  'shell:gitPushTags']);
-  
-  grunt.registerTask( 'releaseMinor', ['bump:minor',
-                                       'version',
-                                       'uglify',
-                                       'sass',
-                                       'shell:gitAddAll',
-                                       'gitcommit:version',
-                                       'gittag:version',
-                                       'shell:gitPushAll',
-                                       'shell:gitPushTags']);
+  // By default, the command release makes a bump patch
+  grunt.registerTask( 'release', ['releasePatch'] );
+  // Make a patch release
+  grunt.registerTask( 'releaseMinor', ['bump:minor','prepareRelease']);
 
  
 
