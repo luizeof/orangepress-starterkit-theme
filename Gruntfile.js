@@ -139,7 +139,8 @@ module.exports = function(grunt) {
                                           'shell:gitAddAll',
                                           'gitcommit:version',
                                           'gittag:version',
-                                          'shell:gitPush'
+                                          'shell:gitPush',
+                                          'shell:gitdoc'
                                           ]);
 
   // By default, the command release makes a bump patch

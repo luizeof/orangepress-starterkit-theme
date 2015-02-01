@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Orangepress
- * @version 1.2.8
+ * @version 1.2.9
  */
 
 // Add Translation Option
