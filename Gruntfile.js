@@ -115,6 +115,6 @@ module.exports = function(grunt) {
   grunt.registerTask('bumpPatch', ['bump:patch','version']);
   
   // Release task
-  grunt.registerTask( 'release', [ 'gitcommit:version', 'gitpush:version', 'gitpush:tag' ]);  
+  grunt.registerTask( 'release', [ 'gitcommit:version', 'gitpush:tag', 'gitpush:version' ]);  
 
 };
