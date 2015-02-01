@@ -3,8 +3,14 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     
-    pkg: grunt.file.readJSON('package.json'),  
+    pkg: grunt.file.readJSON('package.json'),    
     
+    
+    shell: {
+      gitadd: {
+        command: "git add -A"
+      }
+    },
     
     bump: {
         options: {
@@ -27,41 +33,37 @@ module.exports = function(grunt) {
         },
         php: {
             options: {
-                    prefix: '\@version\\s+'
+                prefix: '\@version\\s+'
             },
             src: [ 'functions.php' ],
         }
     },   
     
     
-    // Commit, tag, and push the new version of the theme
-    gitcommit: {
-        version: {
-            options: {
-                message: 'Release: <%= pkg.version %>'
-            },
-            files: {
-                // Specify the files you want to commit
-                src: ['style.css', 'package.json', 'functions.php']
+    // Commit and tag the new version   
+       gitcommit: {
+            version: {
+                options: {
+                    message: 'New version: <%= pkg.version %>'
+                }
             }
-        }
-    },
-    gittag: {
-      version: {
-          options: {
-              tag: 'v<%= pkg.version %>',
-              message: 'v<%= pkg.version %>'
-          }
-      }
-    },
-    gitpush: {
-        version: {},
-        tag: {
-            options: {
-                tags: true
+        },
+        gittag: {
+            version: {
+                options: {
+                    tag: 'v<%= pkg.version %>',
+                    message: 'v<%= pkg.version %>'
+                }
             }
-        }
-    },    
+        },
+        gitpush: {
+            version: {},
+            tag: {
+                options: {
+                    tags: true
+                }
+            }
+        }, 
 
     
     uglify: {
@@ -104,6 +106,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-version');
   grunt.loadNpmTasks('grunt-git');
+  grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-bump');
   
 
@@ -115,6 +118,8 @@ module.exports = function(grunt) {
   grunt.registerTask('bumpPatch', ['bump:patch','version']);
   
   // Release task
-  grunt.registerTask( 'release', [ 'gitcommit:version', 'gitpush:tag', 'gitpush:version' ]);  
+  grunt.registerTask( 'release', [ 'version', 'uglify', 'sass', 'shell:gitadd', 'gitcommit:version', 'gittag:version', 'gitpush:version', 'gitpush:tag' ]);
+
+ 
 
 };
