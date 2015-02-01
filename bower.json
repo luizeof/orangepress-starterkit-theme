@@ -1,11 +1,13 @@
 {
-  "name": "wordpress-bootstrap",
-  "version": "3.3.1",
-  "homepage": "https://github.com/320press/wordpress-bootstrap",
+  "name": "orangepress",
+  "version": "1.0.0",
+  "homepage": "https://github.com/orangeweb/orangepress-starterkit-theme",
   "authors": [
+    "orangeweb <atendimento@orangeweb.com.br>",
+    "luizeof <luizeof@me.com>",
     "chrisbarnes <barnes.chris@gmail.com>"
   ],
-  "description": "A simple WordPress theme based on Bootstrap.",
+  "description": "Orangepress StarterKit is a HTML5 Based Theme for Wordpress with Full Support of Twitter Bootstrap.",
   "moduleType": [
     "node"
   ],
@@ -22,8 +24,6 @@
     "tests"
   ],
   "dependencies": {
-    "modernizer": "~2.8.2",
-    "font-awesome": "~4.2.0",
-    "bootstrap": "~3.3.1"
+    "modernizer": "~2.8.2"
   }
 }
