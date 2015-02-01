@@ -26,12 +26,6 @@ module.exports = function(grunt) {
                 'git push --tags'
             ].join('&&')
       },
-      gitPushAll: {
-        command: "git push --all"
-      },
-      gitPushTags: {
-        command: "git push --tags"
-      },
       changelog: {
         command: "sh .changelog_generator.sh > changelog.txt"
       },
