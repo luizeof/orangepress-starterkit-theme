@@ -147,8 +147,6 @@ module.exports = function(grunt) {
                                           'shell:gitAddAll',
                                           'gitcommit:version',
                                           'gittag:version',
-                                          //'shell:gitPushAll',
-                                          //'shell:gitPushTags'
                                           'shell:gitPush'
                                           ]);
 
