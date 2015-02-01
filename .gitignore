@@ -6,3 +6,4 @@ sitemap.xml.gz
 bower_components/
 node_modules/
 .sass-cache/
+changelog.txt

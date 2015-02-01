@@ -5,6 +5,13 @@ module.exports = function(grunt) {
     
     pkg: grunt.file.readJSON('package.json'),    
     
+    changelog: {
+      sample: {
+        options: {
+          // Task-specific options go here. 
+        }
+      }
+    },    
     
     shell: {
       gitAddAll: {
@@ -15,6 +22,9 @@ module.exports = function(grunt) {
       },
       gitPushTags: {
         command: "git push --tags"
+      },
+      changelog: {
+        command: "sh .changelog_generator.sh > changelog.txt"
       }
     },
     
@@ -63,8 +73,6 @@ module.exports = function(grunt) {
             }
           },
         
-        
-
     
     uglify: {
       dist: {
@@ -107,6 +115,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-version');
   grunt.loadNpmTasks('grunt-git');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-changelog');
   grunt.loadNpmTasks('grunt-bump');
   
 
@@ -118,7 +127,15 @@ module.exports = function(grunt) {
   grunt.registerTask('bumpPatch', ['bump:patch','version']);
   
   // Release task
-  grunt.registerTask( 'release', [ 'version', 'uglify', 'sass', 'shell:gitAddAll', 'gitcommit:version', 'gittag:version', 'shell:gitPushAll', 'shell:gitPushTags' ]);
+  grunt.registerTask( 'release', [ 'version',
+                                   'uglify',
+                                   'sass',
+                                   'shell:gitAddAll',
+                                   'gitcommit:version',
+                                   'gittag:version',
+                                   'shell:gitPushAll',
+                                   'shell:gitPushTags',
+                                   'shell:changelog' ]);
 
  
 
