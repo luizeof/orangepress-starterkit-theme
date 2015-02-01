@@ -7,8 +7,14 @@ module.exports = function(grunt) {
     
     
     shell: {
-      gitadd: {
+      gitAddAll: {
         command: "git add -A"
+      },
+      gitPushAll: {
+        command: "git push --all"
+      },
+      gitPushTags: {
+        command: "git push --tags"
       }
     },
     
@@ -55,15 +61,9 @@ module.exports = function(grunt) {
                     message: 'v<%= pkg.version %>'
                 }
             }
-        },
-        gitpush: {
-            version: {},
-            tag: {
-                options: {
-                    tags: true
-                }
-            }
-        }, 
+          },
+        
+        
 
     
     uglify: {
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
   grunt.registerTask('bumpPatch', ['bump:patch','version']);
   
   // Release task
-  grunt.registerTask( 'release', [ 'version', 'uglify', 'sass', 'shell:gitadd', 'gitcommit:version', 'gittag:version', 'gitpush:version', 'gitpush:tag' ]);
+  grunt.registerTask( 'release', [ 'version', 'uglify', 'sass', 'shell:gitAddAll', 'gitcommit:version', 'gittag:version', 'shell:gitPushAll', 'shell:gitPushTags' ]);
 
  
 
