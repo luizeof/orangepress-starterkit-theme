@@ -123,8 +123,7 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         options: {
-          preserveComments: false,
-          banner: "Powered by Orangepress"
+          preserveComments: false
         },
         // Consider adding bootstrap, jquery and other frameworks here to consolidate your browser requests
         files: {
